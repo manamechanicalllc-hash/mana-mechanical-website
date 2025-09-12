@@ -10,7 +10,7 @@
             font-family: 'Helvetica', Arial, sans-serif;
         }
         .hero-section {
-            background-image: url('https://us.chat-img.sintra.ai/17f46cd6-c518-4a16-8970-30570e73b866/efd24b7d-cdcb-45cb-afc2-a69cbaa1b6f4/image.png');
+            background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
             background-size: cover;
             background-position: center;
             height: 100vh;
@@ -23,21 +23,22 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.6));
+            background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.7));
         }
         .logo {
             position: absolute;
-            bottom: 15%;
+            bottom: 10%;
             left: 50%;
             transform: translateX(-50%);
-            width: 250px;
-            height: 250px;
+            width: 300px;
+            height: 300px;
             border-radius: 50%;
             overflow: hidden;
             background: white;
             display: flex;
             justify-content: center;
             align-items: center;
+            z-index: 10;
         }
         .logo img {
             width: 100%;
@@ -91,7 +92,8 @@
         }
     </style>
 </head>
-<body>
+<body style="background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'); background-size: cover; background-attachment: fixed;">
+    
     <!-- Navigation -->
     <nav class="absolute top-0 right-0 p-6 z-50">
         <a href="#services" class="text-white mx-2 hover:text-blue-200">Services</a>
@@ -102,8 +104,8 @@
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="overlay"></div>
-        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center z-40">
-            <h1 class="text-5xl font-bold mb-4">Mana Mechanical LLC</h1>
+        <div class="absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center z-40">
+            <h1 class="text-6xl font-bold mb-4">Mana Mechanical LLC</h1>
             <h2 class="text-3xl mb-8">Hawaii's Trusted HVAC & Sheet Metal Experts</h2>
             
             <div class="flex justify-center space-x-4 mb-8">
@@ -111,12 +113,13 @@
                 <span class="bg-white text-green-800 px-6 py-3 rounded-full font-semibold">C52 HVAC License</span>
             </div>
 
-            <div>
-                <a href="#contact" class="bg-white text-blue-600 px-10 py-4 rounded-full mr-4 hover:bg-blue-100">Request a Quote</a>
-                <a href="#services" class="border-3 border-white text-white px-10 py-4 rounded-full hover:bg-white hover:text-blue-600">Our Services</a>
+            <div class="mb-16">
+                <a href="#contact" class="bg-white text-blue-600 px-10 py-4 rounded-full mr-4 hover:bg-blue-100 font-bold">Request a Quote</a>
+                <a href="#services" class="border-3 border-white text-white px-10 py-4 rounded-full hover:bg-white hover:text-blue-600 font-bold">Our Services</a>
             </div>
         </div>
 
+        <!-- Large Logo Positioned Below Buttons -->
         <div class="logo">
             <img src="https://us.chat-img.sintra.ai/17f46cd6-c518-4a16-8970-30570e73b866/e1da8501-56f6-4493-ba23-9545d8a19922/image.png" 
                  alt="Mana Mechanical LLC Logo">
@@ -125,7 +128,7 @@
 
     <!-- Services Section -->
     <section id="services" class="content-section">
-        <h2 class="text-4xl text-center mb-12 text-green-600">Our Expert Services</h2>
+        <h2 class="text-4xl font-bold text-center mb-8 text-green-600">Our Expert Services</h2>
         <div class="services-grid">
             <div class="service-card">
                 <h3 class="text-2xl font-bold mb-4 text-blue-600">Sheet Metal Fabrication</h3>
@@ -159,7 +162,7 @@
 
     <!-- About Section -->
     <section id="about" class="content-section">
-        <h2 class="text-4xl text-center mb-12 text-green-600">About Mana Mechanical LLC</h2>
+        <h2 class="text-4xl font-bold text-center mb-8 text-green-600">About Mana Mechanical LLC</h2>
         <div class="text-center">
             <div class="about-logo">
                 <img src="https://us.chat-img.sintra.ai/17f46cd6-c518-4a16-8970-30570e73b866/e1da8501-56f6-4493-ba23-9545d8a19922/image.png" 
@@ -180,7 +183,7 @@
 
     <!-- Contact Section -->
     <section id="contact" class="content-section">
-        <h2 class="text-4xl text-center mb-12 text-green-600">Contact Us</h2>
+        <h2 class="text-4xl font-bold text-center mb-8 text-green-600">Contact Us</h2>
         <div class="contact-form">
             <form name="contact" method="POST" data-netlify="true">
                 <div class="mb-4">
@@ -207,11 +210,9 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-8">
-        <div class="container mx-auto text-center">
-            <p>&copy; 2025 Mana Mechanical LLC. All Rights Reserved.</p>
-            <p>Proudly serving Hawaii with Aloha 🌺</p>
-        </div>
+    <footer class="content-section text-center">
+        <p class="text-gray-700">&copy; 2025 Mana Mechanical LLC. All Rights Reserved.</p>
+        <p class="text-gray-700">Proudly serving Hawaii with Aloha 🌺</p>
     </footer>
 </body>
 </html>
