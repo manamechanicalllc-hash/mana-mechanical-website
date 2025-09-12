@@ -10,11 +10,12 @@
             font-family: 'Helvetica', Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: url('https://us.chat-img.sintra.ai/17f46cd6-c518-4a16-8970-30570e73b866/efd24b7d-cdcb-45cb-afc2-a69cbaa1b6f4/image.png') no-repeat center center fixed;
-            background-size: cover;
         }
         .hero-section {
-            background: transparent;
+            background-image: url('https://us.chat-img.sintra.ai/17f46cd6-c518-4a16-8970-30570e73b866/efd24b7d-cdcb-45cb-afc2-a69cbaa1b6f4/image.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             height: 100vh;
             position: relative;
             color: white;
@@ -97,7 +98,8 @@
         }
     </style>
 </head>
-<body>
+<body style="background: white;">
+    
     <!-- Navigation -->
     <nav class="absolute top-0 right-0 p-6 z-50">
         <a href="#services" class="text-white mx-2 hover:text-blue-200">Services</a>
@@ -189,7 +191,7 @@
     <section id="contact" class="content-section">
         <h2 class="text-4xl font-bold text-center mb-8 text-green-600">Contact Us</h2>
         <div class="contact-form">
-            <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you">
                 <input type="hidden" name="form-name" value="contact">
                 
                 <p class="hidden">
@@ -199,28 +201,31 @@
                 </p>
 
                 <div class="mb-4">
-                    <label class="block text-gray-700 text-sm font-bold mb-2">Name</label>
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="name">Name</label>
                     <input 
                         class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-blue-500" 
                         type="text" 
                         name="name" 
+                        id="name"
                         required
                     >
                 </div>
                 <div class="mb-4">
-                    <label class="block text-gray-700 text-sm font-bold mb-2">Email</label>
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Email</label>
                     <input 
                         class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-blue-500" 
                         type="email" 
                         name="email" 
+                        id="email"
                         required
                     >
                 </div>
                 <div class="mb-6">
-                    <label class="block text-gray-700 text-sm font-bold mb-2">Message</label>
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="message">Message</label>
                     <textarea 
                         class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-blue-500" 
                         name="message" 
+                        id="message"
                         rows="4" 
                         required
                     ></textarea>
@@ -246,5 +251,6 @@
         <p class="text-gray-700">&copy; 2025 Mana Mechanical LLC. All Rights Reserved.</p>
         <p class="text-gray-700">Proudly serving Hawaii with Aloha 🌺</p>
     </footer>
+
 </body>
 </html>
