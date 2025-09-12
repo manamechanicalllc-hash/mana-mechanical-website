@@ -8,11 +8,14 @@
     <style>
         body {
             font-family: 'Helvetica', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
         }
         .hero-section {
-            background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-image: url('https://us.chat-img.sintra.ai/17f46cd6-c518-4a16-8970-30570e73b866/efd24b7d-cdcb-45cb-afc2-a69cbaa1b6f4/image.png');
             background-size: cover;
             background-position: center;
+            background-repeat: no-repeat;
             height: 100vh;
             position: relative;
             color: white;
@@ -90,9 +93,12 @@
             max-width: 500px;
             margin: 0 auto;
         }
+        .hidden {
+            display: none;
+        }
     </style>
 </head>
-<body style="background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'); background-size: cover; background-attachment: fixed;">
+<body style="background-image: url('https://us.chat-img.sintra.ai/17f46cd6-c518-4a16-8970-30570e73b866/efd24b7d-cdcb-45cb-afc2-a69cbaa1b6f4/image.png'); background-size: cover; background-attachment: fixed;">
     
     <!-- Navigation -->
     <nav class="absolute top-0 right-0 p-6 z-50">
@@ -115,7 +121,7 @@
 
             <div class="mb-16">
                 <a href="#contact" class="bg-white text-blue-600 px-10 py-4 rounded-full mr-4 hover:bg-blue-100 font-bold">Request a Quote</a>
-                <a href="#services" class="border-3 border-white text-white px-10 py-4 rounded-full hover:bg-white hover:text-blue-600 font-bold">Our Services</a>
+                <a href="#services" class="bg-white text-blue-600 px-10 py-4 rounded-full hover:bg-blue-100 font-bold">Our Services</a>
             </div>
         </div>
 
@@ -185,21 +191,49 @@
     <section id="contact" class="content-section">
         <h2 class="text-4xl font-bold text-center mb-8 text-green-600">Contact Us</h2>
         <div class="contact-form">
-            <form name="contact" method="POST" data-netlify="true">
+            <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                <input type="hidden" name="form-name" value="contact">
+                
+                <p class="hidden">
+                    <label>Don't fill this out if you're human: 
+                        <input name="bot-field" />
+                    </label>
+                </p>
+
                 <div class="mb-4">
                     <label class="block text-gray-700 text-sm font-bold mb-2">Name</label>
-                    <input class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-blue-500" type="text" name="name" required>
+                    <input 
+                        class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-blue-500" 
+                        type="text" 
+                        name="name" 
+                        required
+                    >
                 </div>
                 <div class="mb-4">
                     <label class="block text-gray-700 text-sm font-bold mb-2">Email</label>
-                    <input class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-blue-500" type="email" name="email" required>
+                    <input 
+                        class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-blue-500" 
+                        type="email" 
+                        name="email" 
+                        required
+                    >
                 </div>
                 <div class="mb-6">
                     <label class="block text-gray-700 text-sm font-bold mb-2">Message</label>
-                    <textarea class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-blue-500" name="message" rows="4" required></textarea>
+                    <textarea 
+                        class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-blue-500" 
+                        name="message" 
+                        rows="4" 
+                        required
+                    ></textarea>
                 </div>
                 <div class="text-center">
-                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-lg" type="submit">Send Message</button>
+                    <button 
+                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-lg" 
+                        type="submit"
+                    >
+                        Send Message
+                    </button>
                 </div>
             </form>
             <div class="mt-6 text-center text-gray-700">
@@ -214,5 +248,8 @@
         <p class="text-gray-700">&copy; 2025 Mana Mechanical LLC. All Rights Reserved.</p>
         <p class="text-gray-700">Proudly serving Hawaii with Aloha 🌺</p>
     </footer>
+</body>
+</html>
+
 </body>
 </html>
