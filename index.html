@@ -6,21 +6,19 @@
     <title>Mana Mechanical LLC - Hawaii's Trusted HVAC & Sheet Metal Experts</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        html, body {
+        body {
+            font-family: 'Helvetica', Arial, sans-serif;
             margin: 0;
             padding: 0;
-            height: 100%;
-            background: black;
-            overflow-x: hidden;
         }
         .hero-section {
-            background-image: url('https://us.chat-img.sintra.ai/17f46cd6-c518-4a16-8970-30570e73b866/efd24b7d-cdcb-45cb-afc2-a69cbaa1b6f4/image.png');
+            background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
             background-size: cover;
             background-position: center;
+            background-attachment: fixed;
             height: 100vh;
             position: relative;
             color: white;
-            overflow: hidden;
         }
         .overlay {
             position: absolute;
@@ -32,18 +30,17 @@
         }
         .logo {
             position: absolute;
-            bottom: 3%;
+            bottom: 15%;
             left: 50%;
             transform: translateX(-50%);
-            width: 500px;
-            height: 500px;
+            width: 250px;
+            height: 250px;
             border-radius: 50%;
             overflow: hidden;
             background: white;
             display: flex;
             justify-content: center;
             align-items: center;
-            z-index: 10;
         }
         .logo img {
             width: 100%;
@@ -97,7 +94,8 @@
         }
     </style>
 </head>
-<body>
+<body style="background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'); background-size: cover; background-attachment: fixed;">
+    
     <!-- Navigation -->
     <nav class="absolute top-0 right-0 p-6 z-50">
         <a href="#services" class="text-white mx-2 hover:text-blue-200">Services</a>
@@ -119,7 +117,7 @@
 
             <div>
                 <a href="#contact" class="bg-white text-blue-600 px-8 py-3 rounded-full mr-4 hover:bg-blue-100">Request a Quote</a>
-                <a href="#services" class="bg-white text-blue-600 px-8 py-3 rounded-full hover:bg-blue-100">Our Services</a>
+                <a href="#services" class="border-2 border-white text-white px-8 py-3 rounded-full hover:bg-white hover:text-blue-600">Our Services</a>
             </div>
         </div>
 
@@ -188,29 +186,21 @@
     <section id="contact" class="content-section">
         <h2 class="text-4xl font-bold text-center mb-8 text-green-600">Contact Us</h2>
         <div class="contact-form">
-            <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-                <input type="hidden" name="form-name" value="contact">
-                
-                <p class="hidden">
-                    <label>Don't fill this out if you're human: 
-                        <input name="bot-field" />
-                    </label>
-                </p>
-
+            <form>
                 <div class="mb-4">
                     <label class="block text-gray-700 text-sm font-bold mb-2">Name</label>
-                    <input class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-blue-500" type="text" name="name" required>
+                    <input class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-blue-500" type="text" placeholder="Your Name">
                 </div>
                 <div class="mb-4">
                     <label class="block text-gray-700 text-sm font-bold mb-2">Email</label>
-                    <input class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-blue-500" type="email" name="email" required>
+                    <input class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-blue-500" type="email" placeholder="Your Email">
                 </div>
                 <div class="mb-6">
                     <label class="block text-gray-700 text-sm font-bold mb-2">Message</label>
-                    <textarea class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-blue-500" rows="4" name="message" required></textarea>
+                    <textarea class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-blue-500" rows="4" placeholder="Your Message"></textarea>
                 </div>
                 <div class="text-center">
-                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-lg" type="submit">Send Message</button>
+                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-lg">Send Message</button>
                 </div>
             </form>
             <div class="text-center mt-6">
