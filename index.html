@@ -8,14 +8,11 @@
     <style>
         body {
             font-family: 'Helvetica', Arial, sans-serif;
-            margin: 0;
-            padding: 0;
         }
         .hero-section {
-            background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-image: url('https://us.chat-img.sintra.ai/17f46cd6-c518-4a16-8970-30570e73b866/efd24b7d-cdcb-45cb-afc2-a69cbaa1b6f4/image.png');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed;
             height: 100vh;
             position: relative;
             color: white;
@@ -94,8 +91,7 @@
         }
     </style>
 </head>
-<body style="background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'); background-size: cover; background-attachment: fixed;">
-    
+<body>
     <!-- Navigation -->
     <nav class="absolute top-0 right-0 p-6 z-50">
         <a href="#services" class="text-white mx-2 hover:text-blue-200">Services</a>
@@ -116,8 +112,8 @@
             </div>
 
             <div>
-                <a href="#contact" class="bg-white text-blue-600 px-8 py-3 rounded-full mr-4 hover:bg-blue-100">Request a Quote</a>
-                <a href="#services" class="border-2 border-white text-white px-8 py-3 rounded-full hover:bg-white hover:text-blue-600">Our Services</a>
+                <a href="#contact" class="bg-white text-blue-600 px-10 py-4 rounded-full mr-4 hover:bg-blue-100">Request a Quote</a>
+                <a href="#services" class="border-3 border-white text-white px-10 py-4 rounded-full hover:bg-white hover:text-blue-600">Our Services</a>
             </div>
         </div>
 
@@ -129,7 +125,7 @@
 
     <!-- Services Section -->
     <section id="services" class="content-section">
-        <h2 class="text-4xl font-bold text-center mb-8 text-green-600">Our Expert Services</h2>
+        <h2 class="text-4xl text-center mb-12 text-green-600">Our Expert Services</h2>
         <div class="services-grid">
             <div class="service-card">
                 <h3 class="text-2xl font-bold mb-4 text-blue-600">Sheet Metal Fabrication</h3>
@@ -163,7 +159,7 @@
 
     <!-- About Section -->
     <section id="about" class="content-section">
-        <h2 class="text-4xl font-bold text-center mb-8 text-green-600">About Mana Mechanical LLC</h2>
+        <h2 class="text-4xl text-center mb-12 text-green-600">About Mana Mechanical LLC</h2>
         <div class="text-center">
             <div class="about-logo">
                 <img src="https://us.chat-img.sintra.ai/17f46cd6-c518-4a16-8970-30570e73b866/e1da8501-56f6-4493-ba23-9545d8a19922/image.png" 
@@ -175,35 +171,35 @@
                 locally owned business committed to delivering exceptional HVAC and sheet metal services.
             </p>
             <div class="flex justify-center space-x-4">
-                <span class="bg-blue-500 text-white px-6 py-3 rounded-full">Locally Owned</span>
-                <span class="bg-green-500 text-white px-6 py-3 rounded-full">Union Labor Ready</span>
-                <span class="bg-blue-500 text-white px-6 py-3 rounded-full">RME Licensed</span>
+                <span class="bg-blue-500 text-white px-8 py-4 rounded-full">Locally Owned</span>
+                <span class="bg-green-500 text-white px-8 py-4 rounded-full">Union Labor Ready</span>
+                <span class="bg-blue-500 text-white px-8 py-4 rounded-full">RME Licensed</span>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="content-section">
-        <h2 class="text-4xl font-bold text-center mb-8 text-green-600">Contact Us</h2>
+        <h2 class="text-4xl text-center mb-12 text-green-600">Contact Us</h2>
         <div class="contact-form">
-            <form>
+            <form name="contact" method="POST" data-netlify="true">
                 <div class="mb-4">
                     <label class="block text-gray-700 text-sm font-bold mb-2">Name</label>
-                    <input class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-blue-500" type="text" placeholder="Your Name">
+                    <input class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-blue-500" type="text" name="name" required>
                 </div>
                 <div class="mb-4">
                     <label class="block text-gray-700 text-sm font-bold mb-2">Email</label>
-                    <input class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-blue-500" type="email" placeholder="Your Email">
+                    <input class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-blue-500" type="email" name="email" required>
                 </div>
                 <div class="mb-6">
                     <label class="block text-gray-700 text-sm font-bold mb-2">Message</label>
-                    <textarea class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-blue-500" rows="4" placeholder="Your Message"></textarea>
+                    <textarea class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-blue-500" name="message" rows="4" required></textarea>
                 </div>
                 <div class="text-center">
-                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-lg">Send Message</button>
+                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-lg" type="submit">Send Message</button>
                 </div>
             </form>
-            <div class="text-center mt-6">
+            <div class="mt-6 text-center text-gray-700">
                 <p class="font-semibold">📞 (808) 900-2747</p>
                 <p class="font-semibold">✉️ manamechanicalllc@gmail.com</p>
             </div>
@@ -211,9 +207,11 @@
     </section>
 
     <!-- Footer -->
-    <footer class="content-section text-center">
-        <p class="text-gray-700">&copy; 2025 Mana Mechanical LLC. All Rights Reserved.</p>
-        <p class="text-gray-700">Proudly serving Hawaii with Aloha 🌺</p>
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2025 Mana Mechanical LLC. All Rights Reserved.</p>
+            <p>Proudly serving Hawaii with Aloha 🌺</p>
+        </div>
     </footer>
 </body>
 </html>
