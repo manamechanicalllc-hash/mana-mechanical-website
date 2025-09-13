@@ -1,78 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mana Mechanical LLC - Hawaii's Trusted HVAC & Sheet Metal Experts</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header>
-      <h1>Mana Mechanical LLC</h1>
-      <p>Hawaii's Trusted HVAC & Sheet Metal Experts</p>
-      <nav>
-        <a href="#services">Services</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mana Mechanical LLC</title>
+  <style>
+    /* Reset and base styles */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
+      background-color: #f9fafb;
+      color: #1f2937;
+    }
+    header, section, footer {
+      padding: 2rem;
+      max-width: 960px;
+      margin: auto;
+    }
+    h1, h2, h3 {
+      color: #111827;
+    }
+    nav ul {
+      display: flex;
+      gap: 1rem;
+      list-style: none;
+      margin-top: 1rem;
+    }
+    nav a {
+      text-decoration: none;
+      color: #2563eb;
+    }
 
-    <section id="services">
-      <h2>Our Expert Services</h2>
-      <article>
-        <h3>Sheet Metal Fabrication</h3>
-        <ul>
-          <li>Custom Ductwork Systems</li>
-          <li>Precision Metal Fabrication</li>
-          <li>SMACNA Compliance</li>
-        </ul>
-      </article>
-      <article>
-        <h3>HVAC Installation</h3>
-        <ul>
-          <li>System Installation & Replacement</li>
-          <li>Emergency Repairs</li>
-          <li>Preventative Maintenance</li>
-        </ul>
-      </article>
-      <article>
-        <h3>Government Contracting</h3>
-        <ul>
-          <li>Union Local 293 Ready</li>
-          <li>Government Project Expertise</li>
-          <li>Complete Documentation</li>
-        </ul>
-      </article>
-    </section>
+    /* Ductwork animation */
+    .duct-animation {
+      margin: 2rem auto;
+      width: 100%;
+      max-width: 600px;
+      height: 200px;
+      position: relative;
+      background: #e5e7eb;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .duct {
+      position: absolute;
+      width: 100px;
+      height: 40px;
+      background: #9ca3af;
+      border: 2px solid #4b5563;
+      border-radius: 4px;
+      animation: slideIn 4s infinite;
+    }
+    @keyframes slideIn {
+      0% { left: -120px; top: 80px; opacity: 0; }
+      30% { opacity: 1; }
+      50% { left: 250px; top: 80px; }
+      70% { left: 500px; top: 80px; opacity: 1; }
+      100% { left: 600px; top: 80px; opacity: 0; }
+    }
 
-    <section id="about">
-      <h2>About Mana Mechanical LLC</h2>
-      <p>
-        Founded in Hawaii, Mana Mechanical LLC brings over a decade of mechanical expertise to every project. Led by David Tuipulotu, a seasoned professional with C44 and C52 licenses, we're a family-first, locally owned business committed to delivering exceptional HVAC and sheet metal services.
-      </p>
-    </section>
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #6b7280;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Mana Mechanical LLC</h1>
+    <p>Hawaii's Trusted HVAC & Sheet Metal Experts</p>
+    <nav>
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <section id="contact">
-      <h2>Contact Us</h2>
-      <form>
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" required />
+  <section id="services">
+    <h2>Our Expert Services</h2>
+    <article>
+      <h3>Sheet Metal Fabrication</h3>
+      <ul>
+        <li>Custom Ductwork Systems</li>
+        <li>Precision Metal Fabrication</li>
+        <li>SMACNA Compliance</li>
+      </ul>
+    </article>
+    <article>
+      <h3>HVAC Installation</h3>
+      <ul>
+        <li>System Installation & Replacement</li>
+        <li>Emergency Repairs</li>
+        <li>Preventative Maintenance</li>
+      </ul>
+    </article>
+    <article>
+      <h3>Government Contracting</h3>
+      <ul>
+        <li>Union Local 293 Ready</li>
+        <li>Government Project Expertise</li>
+        <li>Complete Documentation</li>
+      </ul>
+    </article>
 
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required />
+    <!-- Ductwork Animation -->
+    <div class="duct-animation">
+      <div class="duct"></div>
+    </div>
+  </section>
 
-        <label for="message">Message</label>
-        <textarea id="message" name="message" required></textarea>
+  <section id="about">
+    <h2>About Mana Mechanical LLC</h2>
+    <p>Founded in Hawaii, Mana Mechanical LLC brings over a decade of mechanical expertise to every project.</p>
+    <p>Led by David Tuipulotu, a seasoned professional with C44 and C52 licenses.</p>
+    <ul>
+      <li>Locally Owned</li>
+      <li>Union Labor Ready</li>
+      <li>RME Licensed</li>
+    </ul>
+  </section>
 
-        <button type="submit">Send Message</button>
-      </form>
-      <p>📞 (808) 900-2747</p>
-      <p>✉️ manamechanicalllc@gmail.com</p>
-    </section>
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <label>Name: <input type="text" name="name" /></label><br />
+      <label>Email: <input type="email" name="email" /></label><br />
+      <label>Message: <textarea name="message"></textarea></label><br />
+      <button type="submit">Send Message</button>
+    </form>
+    <p>📞 (808) 900-2747</p>
+    <p>✉️ manamechanicalllc@gmail.com</p>
+  </section>
 
-    <footer>
-      <p>© 2025 Mana Mechanical LLC. All Rights Reserved.</p>
-      <p>Proudly serving Hawaii with Aloha 🌺</p>
-    </footer>
-  </body>
+  <footer>
+    <p>© 2025 Mana Mechanical LLC. All Rights Reserved.</p>
+    <p>Proudly serving Hawaii with Aloha 🌺</p>
+  </footer>
+</body>
 </html>
